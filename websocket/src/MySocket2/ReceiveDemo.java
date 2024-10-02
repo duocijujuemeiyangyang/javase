@@ -1,4 +1,4 @@
-package MySocket2;
+package websocket.src.MySocket2;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -24,7 +24,7 @@ public class ReceiveDemo {
                 break;
             }
 
-            System.out.println(new String(dp.getData()));
+            System.out.println(new String(dp.getData(), 0, dp.getLength()));
 
         }
         ds.close();
