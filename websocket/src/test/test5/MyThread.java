@@ -4,11 +4,11 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Thread implements Runnable {
+public class MyThread implements Runnable {
 
     ServerSocket ss=null;
 
-    public Thread(ServerSocket ss) {
+    public MyThread(ServerSocket ss) {
         this.ss=ss;
     }
 

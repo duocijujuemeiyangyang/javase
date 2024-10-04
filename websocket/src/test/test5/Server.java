@@ -1,4 +1,4 @@
-package websocket.src.test.test5;
+package test.test5;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -13,7 +13,8 @@ public class Server {
         //1.创建对象并绑定端口
         ServerSocket ss = new ServerSocket(10086);
         ThreadPoolExecutor pool = new ThreadPoolExecutor(3, 24, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<>(3), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
-        pool.submit(new Thread(ss));
+        pool.submit(new websocket.src.test.test5.MyThread(ss));
+
 
     }
 }
